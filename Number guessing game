@@ -1,0 +1,24 @@
+from random import randint
+print("(: Welcome to the 'Guess The Word' Game :)")
+a = int(input("Enter the lower limit: "))
+b = int(input("Enter the higher limit: "))
+attempts = 3
+score = 0
+number = randint(a, b)
+while attempts > 0:
+    guess = int(input("Enter your guess: "))
+    if guess == number:
+        score += 10
+        print("Congratulations! You guessed the number.")
+        print(f"Your score is {score}")
+        break
+    else:
+        attempts -= 1
+        if guess > number:
+            print("Too high.")
+        else:
+            print("Too low.")
+        print(f"You have {attempts} attempts remaining.")
+        score = 0
+if attempts == 0:
+    print(f"Sorry, you ran out of attempts. The number was {number}.")
