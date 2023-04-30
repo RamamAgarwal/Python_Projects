@@ -1,0 +1,23 @@
+t=1
+while t==1:
+    st=input('Enter your name: ')
+    print(f'''Rules: 1. Rock beats Scissor,
+                     2. Scissor beats Paper and
+                     3. Paper beats Rock.''')
+    flag=0
+    import random
+    user=input('Enter your choice: ')
+    ls=['Rock','Paper','Scissor']
+    ch=random.choice(ls)
+    print("User's input: ",user)
+    print("Computer's input: ",ch)
+    if ch==user:
+        print('Tie')
+        break
+    if (user=='Rock' and ch=='Scissor') or (user=='Paper' and ch=='Rock') or (user=='Scissor' and ch=='Paper'):
+        flag=1
+    if flag==1:
+        print('Congratulations,',st,'you win.')
+    else:
+        print('Alas, you lost!')
+    t=int(input('If wanna play again, press 1 otherwise press 0: '))
