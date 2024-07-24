@@ -1,2 +1,2 @@
 # Python_Programming
-Repository for Programs written in Python language.
+Repository including some of the fun-games developed by me in Python.
